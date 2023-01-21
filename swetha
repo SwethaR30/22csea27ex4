@@ -1,0 +1,54 @@
+
+1. Number series 
+Write a program to find the sum of series 1/2!+2/3!+3/5!+4/6!+.....N/(N+1)! Write a Program to print the Fibonacci series. 
+PROGRAM: 
+num=int(input(“enter your limit:”)) 
+res = 0 
+fact = 1 
+for i in range(1, num+1): 
+ fact *= i 
+ res = res + (i/ fact) 
+print(“the sum of the series is :”,res) 
+OUTPUT: 
+enter your limit:10 
+the sum of the series is : 2.7182815255731922
+II. Number Pyramid - Inverted Pyramid pattern with the same digit PROGRAM: 
+rows = 5 
+num = rows 
+for i in range(rows, 0, -1): 
+ for j in range(0, i): 
+ print(num, end="") 
+ print("\r") 
+OUTPUT: 
+55555 
+5555 
+555 
+55 
+5
+III. Pyramid Pattern - Right down mirror star Pattern PROGRAM: 
+n=int(input("Enter the number of rows:")) 
+space=0 
+for i in range(n): 
+ for j in range(space): 
+ print("",end=" ") 
+ space=space+1 
+ for k in range(n-i,0,-1): 
+ print( "*",end=" ") 
+ print(" ") 
+OUTPUT: 
+Enter number of rows:5 
+* * * * *  
+* * * *  
+ * * *  
+ * *  
+ * 
+IV. Reversing a Number 
+PROGRAM: 
+num = int(input("enter a number:")) reversed_num = 0 
+while (num != 0): 
+ digit = num % 10 
+ reversed_num = reversed_num * 10 + digit  num //= 10 
+print("Reversed Number:"+ str(reversed_num)) 
+OUTPUT: 
+enter a number:345 
+Reversed Number:543
